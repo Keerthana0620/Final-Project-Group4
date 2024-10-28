@@ -26,3 +26,6 @@ Group-Proposal: contains Project proposal pdf.
   4. PPT
   5. Prepare presentation
 
+## Possible actions
+  1. Post-train analysis
+
