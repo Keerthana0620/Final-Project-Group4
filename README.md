@@ -20,11 +20,9 @@ The dataset for this project will be a collection of recent news articles. Artic
 Group-Proposal: contains Project proposal pdf.
 
 ## incompleted actions
-  1. Select dataset
-  2. Submit proposal
-  3. Clean data
-  4. Train model
-  5. Evaluate
-  6. PPT
-  7. Prepare presentation
+  1. Clean data
+  2. Train model
+  3. Evaluate
+  4. PPT
+  5. Prepare presentation
 
