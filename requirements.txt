@@ -1,1 +1,14 @@
+# Data Handling
+pandas
+numpy
+
+# Natural Language Processing
+nltk
+spacy
+
+# Machine Learning & Deep Learning
+tensorflow
+torch
+transformers
+
 
