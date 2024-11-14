@@ -1,1 +1,17 @@
+## =================== Presentation On News Generation Using Different Advanced Text Generation Models ================================
 
+### - Introduction 
+### - About the Dataset Used
+### -Data Preprocessing 
+### Advanced Model Comparison: 
+
+  ### - RNN
+  ### - LSTM
+  ### - BERT
+  ### - Makovic Chain
+
+### - Model Testing
+### - Model Obvervation/Result
+### Conclusion 
+### -Recommendation
+### - Futher Study - Post Training Analysis 
