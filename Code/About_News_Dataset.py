@@ -270,7 +270,7 @@ if News_clean_dataset('New_articles_combined.csv', clean_file_path):
     clean_df_preview = preview_dataset(clean_file_path)
     print(clean_df_preview[:5])
 
-#=======================EAnalysis done===========
+#=======================EAD Analysis done===========
 #Clean dataset by removing problematic characters
 # Handle quote issue #Remove empty lines
 # Create a new cleaned file
