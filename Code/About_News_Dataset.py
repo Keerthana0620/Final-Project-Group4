@@ -165,6 +165,6 @@ if News_clean_dataset('New_articles_combined.csv', clean_file_path):
 # Handle quote issue
 # Remove empty lines
 # Create a new cleaned file
-# Show basic statistical information your data
+# Show basic statistical information the data
 
 
