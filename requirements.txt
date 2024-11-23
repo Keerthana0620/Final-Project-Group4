@@ -1,3 +1,6 @@
+# Data Downloading
+gdown
+
 # Data Handling
 pandas
 numpy
@@ -5,6 +8,7 @@ numpy
 # Natural Language Processing
 nltk
 spacy
+re
 
 # Machine Learning & Deep Learning
 tensorflow
