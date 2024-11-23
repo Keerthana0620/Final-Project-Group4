@@ -9,6 +9,7 @@ numpy
 nltk
 spacy
 re
+string
 
 # Machine Learning & Deep Learning
 tensorflow
