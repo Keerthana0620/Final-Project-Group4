@@ -2,17 +2,24 @@
 
    File name : New_articles_combined.csv
 
-2. Preprocessed data : https://drive.google.com/drive/folders/1p7niict92ZueuiMcbHxRW9p7zIx-3PZJ?usp=sharing
+# After 24 Nov, muted by Aaron
+                  2. Preprocessed data : https://drive.google.com/drive/folders/1p7niict92ZueuiMcbHxRW9p7zIx-3PZJ?usp=sharing
+                  
+                     File name : data_preprocessed.csv
+                  
+                  3. Cleaned_dataset_generated : https://drive.google.com/drive/u/0/folders/1CQnVJ2-5p34wgDE54f3PoE-oiFgAsTWM
+                     filename:cleaned_articles.csv
+                  
+                  4. Reduced Data(1GB): https://drive.google.com/file/d/1gNCuLppZfNRmbbjKErKs6OhFaUpHSIr0/view?usp=sharing 
+                  
+                  File name : reduced_dataset.csv
+                  
+                  5. Reduced Data(500MB,100MB): https://drive.google.com/drive/folders/1GCD1ZpqQHXHcRrvNt_zt7lYpK00m78g3?dmr=1&ec=wgc-drive-globalnav-goto
+                  
+                  File Names: reduced_data_100MB.csv, reduced_data_500MB.csv
 
-   File name : data_preprocessed.csv
+2. reduced data : https://drive.google.com/file/d/1869IQxLglCrCbAdcPaSulJqX9kguv2LX/view?usp=sharing
 
-3. Cleaned_dataset_generated : https://drive.google.com/drive/u/0/folders/1CQnVJ2-5p34wgDE54f3PoE-oiFgAsTWM
-   filename:cleaned_articles.csv
+3. reduced masked data : https://drive.google.com/file/d/1RkGn28hkFcGNJPtHx4OvSvxRaerQeNec/view?usp=sharing
 
-4. Reduced Data(1GB): https://drive.google.com/file/d/1gNCuLppZfNRmbbjKErKs6OhFaUpHSIr0/view?usp=sharing 
-
-File name : reduced_dataset.csv
-
-5. Reduced Data(500MB,100MB): https://drive.google.com/drive/folders/1GCD1ZpqQHXHcRrvNt_zt7lYpK00m78g3?dmr=1&ec=wgc-drive-globalnav-goto
-
-File Names: reduced_data_100MB.csv, reduced_data_500MB.csv
+4. reduced noisy data : https://drive.google.com/file/d/1NrbJb4SKSoNXKCpkoCBdY1uNmkBniEW-/view?usp=sharing
