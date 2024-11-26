@@ -18,3 +18,8 @@
 - Remove empty lines
 - Create a new cleaned file
 - Show basic statistical information your data
+
+### =====================Model Implemented=========================
+
+- Classical model : Markov chain
+- Deep neural netwrok model implemented : transformer - BART , GPT-2 : LSTM + Attention, RNN
