@@ -5,15 +5,16 @@ gdown
 pandas
 numpy
 
-# Natural Language Processing
+# Natural Language Processing- classical method
 nltk
 spacy
 re
 string
 
-# Machine Learning & Deep Learning
+# Machine Learning & Deep Learning using tensorflow and pytorch 
 tensorflow
 torch
 transformers
+torch
 
 
