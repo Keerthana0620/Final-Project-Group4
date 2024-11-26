@@ -646,3 +646,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+ # ======================LSTM + Attention implementation===================
+# Code Architecture Analysis :  Model Components
+# 1.  NewsDatasetRead: Handles data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text data
+# 2. NewsDatasetProcessor: Creates vocabulary, Converts text to numerical sequences, Handles tokenization and special tokens
+# 3. ImprovedLSTMAttention: Bidirectional LSTM, Attention mechanism, Layer normalization, Dropout for regularization
+# 4. ImprovedNewsGenerator: Training loop, Evaluation metrics, Text generation with advanced sampling techniques
+# ---------------------------------------------------------------------------------------------------
+# Model Architecture Strengths:
+# 1. LSTM Improvements: Bidirectional LSTM (captures context from both directions),  Multiple LSTM layers
+# Dropout for regularization,  Layer normalization
+
+# 2. Attention Mechanism: Learns to focus on important parts of the sequence
+# Multi-layer attention with Tanh activation, Helps mitigate vanishing gradient problem
+
+# 3. Text Generation Techniques: Temperature scaling , Top-k sampling, Top-p (nucleus) sampling
+# Prevents repetitive and bland outputs
