@@ -27,3 +27,32 @@ Filename: New_articles_combined.csv
    - Inshorts News Data
    - NYTimes Article Dataset
 
+- About the Dataset: 
+    - Dataset preview
+    - Getting basic dataset Information 
+
+- Data Pre-processing Pipeline:
+  - Text Preprocessing:
+      - Data cleaning and normalization
+      - Token generation
+      - Sequence padding
+      - Vocabulary building
+
+  - Training Pipeline:
+      - Batch generation
+      - Model training with cross-validation
+      - Hyperparameter optimization
+
+- Evaluation Metrics:
+    - Quantitative Metrics: 
+        - Perplexity Score
+        - BLEU Score
+        - ROUGE Score
+        - Text Similarity Metrics
+    - Qualitative Assessment: 
+        - Grammar and coherence
+        - Content relevance
+        - Style consistency
+        - Factual accuracy
+     
+- References: 
