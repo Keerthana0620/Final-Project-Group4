@@ -23,4 +23,7 @@ Filename: New_articles_combined.csv
  - Data Sources:
     - CNN/DailyMail
     - BBC News
-   - The New York Tim
+   - The New York Times
+   - Inshorts News Data
+   - NYTimes Article Dataset
+
