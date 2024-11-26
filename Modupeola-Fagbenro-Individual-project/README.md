@@ -47,7 +47,6 @@ Filename: New_articles_combined.csv
     - Quantitative Metrics: 
         - Perplexity Score
         - BLEU Score
-        - ROUGE Score
         - Text Similarity Metrics
     - Qualitative Assessment: 
         - Grammar and coherence
