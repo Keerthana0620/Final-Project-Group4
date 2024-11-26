@@ -29,7 +29,13 @@ Filename: New_articles_combined.csv
 
 - About the Dataset: 
     - Dataset preview
-    - Getting basic dataset Information 
+    - Getting basic dataset Information
+ 
+ ### Model Architecture 
+
+  #### Tech Stats 💻 :
+  <img src="https://img.shields.io/badge/python-orange" alt="python" /> <img src="https://img.shields.io/badge/pytorch-blue" alt="pytorch" /> <img src="https://img.shields.io/badge/pandas-lightgreen" alt="pandas"/> <img src="https://img.shields.io/badge/numpy-blue" alt="numpy" /> <img src="https://img.shields.io/badge/torch-orange" alt="torch" />
+
 
 - Data Pre-processing Pipeline:
   - Text Preprocessing:
