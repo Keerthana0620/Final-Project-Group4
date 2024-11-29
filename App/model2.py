@@ -1,31 +1,34 @@
 import streamlit as st
-
+import gdown
+import os
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from transformers import pipeline
 
+# Step 2: Load the model and tokenizer
 @st.cache_resource
 def load_model():
-    tokenizer = GPT2Tokenizer.from_pretrained('./fine_tuned_GPTs')  # Path to saved model
+    # Load the model and tokenizer from the extracted folder
+    tokenizer = GPT2Tokenizer.from_pretrained('./fine_tuned_GPTs')
     model = GPT2LMHeadModel.from_pretrained('./fine_tuned_GPTs')
     return model, tokenizer
 
 model, tokenizer = load_model()
 
-def generate_text(prompt,fine_tuned_model=model, fine_tuned_tokenizer=tokenizer):
+# Step 3: Generate text using the model
+def generate_text(prompt, fine_tuned_model=model, fine_tuned_tokenizer=tokenizer):
     # Initialize the pipeline for text generation
     generator = pipeline("text-generation", model=fine_tuned_model, tokenizer=fine_tuned_tokenizer)
 
-    # Generate text based on a prompt
+    # Generate text based on the prompt
     generated_text = generator(prompt, max_length=1000, num_return_sequences=1)
     return generated_text[0]['generated_text']
 
+# Step 4: Streamlit input section
 def input():
     st.subheader("GPT-2 Text Generation")
     # Input Section for Text Generation
-    # User Input
     prompt = st.text_input("Enter a prompt:")
 
-    # Generate Text
     if st.button("Generate"):
         with st.spinner("Generating..."):
             output = generate_text(prompt)
