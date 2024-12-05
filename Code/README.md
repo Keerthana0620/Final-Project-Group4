@@ -22,4 +22,4 @@
 ### =====================Model Implemented=========================
 
 - Classical model : Markov chain
-- Deep neural netwrok model implemented : transformer - BART , GPT-2 : LSTM + Attention, RNN
+- Deep neural netwrok model implemented : transformer - BART , GPT-2 : LSTM + Attention, RNN, T5
