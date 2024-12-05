@@ -49,10 +49,9 @@ To ensure the dataset is usable and efficient for training, the following steps 
 
 These processed datasets are available for other group members to utilize in their respective tasks, ensuring consistency and efficiency across the project.
 
-## Incompleted Actions
 
-1. Train model
-2. Evaluate
+1. Train model with different model Architecture: Classical: Markov and  Neural network ;LSTM, RNN, BART, GPT, T5
+2. Evaluate the best model 
 3. Prepare presentation (PPT and slides)
 
 ## Possible Actions
