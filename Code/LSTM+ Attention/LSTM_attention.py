@@ -1,4 +1,5 @@
 #%%
+#%%
 import os
 import pandas as pd
 import re
@@ -12,6 +13,9 @@ from collections import Counter
 from typing import List, Dict, Tuple
 
 print(os.getcwd()) #remove if not needed
+#clearning the GPU memory
+torch.cuda.empty_cache()
+
 
 class NewsDatasetRead:
     def __init__(self, data_path='cleaned_articles.csv'):
@@ -22,26 +26,36 @@ class NewsDatasetRead:
         try:
             print(f"Attempting to read dataset from: {self.data_path}")
 
-            #examine the problematic lines in the dataset
-            with open(self.data_path, 'r') as file:
+            # Examine the problematic lines in the dataset
+            with open(self.data_path, 'r', encoding='utf-8', errors='replace') as file:
                 lines = file.readlines()
                 print("\nExamining data structure:")
                 print("Line 55106:", lines[55105])  # Line before
                 print("Line 55107:", lines[55106])  # Problematic line
                 print("Line 55108:", lines[55107])  # Line after
 
-            # Try reading with different encodings and error handling
+            # More robust CSV reading
             try:
                 self.data = pd.read_csv(
                     self.data_path,
                     on_bad_lines='skip',  # Skip problematic lines
-                    encoding='utf-8'  # First try utf-8
+                    engine='python',  # More flexible Python engine
+                    quoting=3,  # QUOTE_NONE
+                    encoding='utf-8',  # Try UTF-8 first
+                    encoding_errors='replace',  # Replace problematic characters
+                    sep=',',  # Explicitly set separator
+                    dtype={'text': str}  # Ensure text column is string
                 )
+
             except UnicodeDecodeError:
                 self.data = pd.read_csv(
                     self.data_path,
-                    on_bad_lines='skip',  # Skip problematic lines
-                    encoding='latin1'  # Fall back to latin1
+                    on_bad_lines='skip',
+                    engine='python',
+                    quoting=3,
+                    encoding='latin1',
+                    sep=',',
+                    dtype={'text': str}
                 )
 
             print("\nDataset Information:")
@@ -55,6 +69,9 @@ class NewsDatasetRead:
             # Rename 'Article' column to 'text' for consistency
             if 'Article' in self.data.columns:
                 self.data = self.data.rename(columns={'Article': 'text'})
+
+            # Remove any empty strings or pure whitespace
+            self.data = self.data[self.data['text'].str.strip().str.len() > 0]
 
             # Removing rows with missing values
             self.data = self.data.dropna(subset=['text'])
@@ -70,7 +87,6 @@ class NewsDatasetRead:
             print("Current working directory:", os.getcwd())
             print("Files in current directory:", os.listdir())
             raise
-
     def preprocessing_newsdataset(self, text_column='text', min_word_freq=2):
         if self.data is None:
             raise ValueError("Dataset is not loaded. Call loading_dataset() first.")
@@ -78,13 +94,17 @@ class NewsDatasetRead:
         def clean_text(text):
             if not isinstance(text, str):
                 return ""
+            # Convert to lowercase
             text = text.lower()
-            text = re.sub(r'[\\\'\"(){}[\]]', ' ', text)
-            text = re.sub(r'[.,!?;:]', ' \g<0> ', text)
-            text = re.sub(r'\b\d+\b', ' <NUM> ', text)
-            text=  re.sub(r'\s+', ' ', text)
+            # Remove special characters but keep some punctuation for better context
+            text = re.sub(r'[^a-z0-9\s.,!?]', ' ', text)
+            # Standardize spaces around punctuation
+            text = re.sub(r'([.,!?])', r' \1 ', text)
+            # Replace numbers
+            text = re.sub(r'\b\d+\b', '<NUM>', text)
+            # Remove extra whitespace
+            text = re.sub(r'\s+', ' ', text)
             return text.strip()
-
 
         # checking to make sure right colum is used
         if text_column not in self.data.columns:
@@ -94,7 +114,7 @@ class NewsDatasetRead:
         print(f"Initial number of texts: {len(self.data)}")
 
         cleaned_texts = [clean_text(text) for text in self.data[text_column].tolist()]
-        cleaned_texts = [text for text in cleaned_texts if 3 <= len(text.split()) >= 200]
+        cleaned_texts = [text for text in cleaned_texts if 3 <= len(text.split()) <= 200]
 
         word_counts = Counter()
         for text in cleaned_texts:
@@ -107,7 +127,6 @@ class NewsDatasetRead:
         print(f"Vocabulary size after frequency filtering: {len(frequent_words)}")
 
         return cleaned_texts, frequent_words
-
 
 
 class NewsDatasetProcessor:
@@ -624,16 +643,22 @@ def main():
         dataset, [train_size, val_size, test_size]
     )
 
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=32)
-    test_loader = DataLoader(test_dataset, batch_size=32)
-
+    # Just modify these lines in main()
+    batch_size = min(32, len(train_dataset) // 100)  # Dynamic batch size
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size)
     # Train model
     generator.train(train_loader, val_loader, num_epochs=5)
 
     # Generate text
-    prompt = "business news"
-    generated_text = generator.generate(prompt)
+    prompt = "business news about technology companies and their financial performance in the market"
+    generated_text = generator.generate(prompt,
+                                        max_length=150,  # Increased from 100
+                                        temperature=0.7,  # Reduced from 1.0 for more focused output
+                                        top_k=50,  # Reduced from 100 for more selective sampling
+                                        top_p=0.85  # Reduced from 0.95 for more focused sampling
+                                        )
     print(f"Generated text: {generated_text}")
 
     # Evaluate model
