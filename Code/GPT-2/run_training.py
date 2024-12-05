@@ -1,5 +1,4 @@
 
-
 # coding=utf-8
 # Copyright 2018 The Google AI Language Team Authors and The HuggingFace Inc. team.
 # Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
@@ -15,8 +14,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 """
-Fine-tuning the library models for language modeling on a text file (GPT-2).
+Fine-tuning the Transformer models for language modeling on a text file (GPT-2).
 """
 
 
@@ -86,7 +86,7 @@ class DataTrainingArguments:
     )
 
     block_size: int = field(
-        default=-1,
+        default=512,
         metadata={
             "help": "Optional input sequence length after tokenization."
             "The training dataset will be truncated in block of this size for training."
@@ -197,10 +197,30 @@ def main():
         tokenizer=tokenizer, mlm=False
     )
 
+    custom_training_args = TrainingArguments(
+        output_dir=training_args.output_dir,
+        overwrite_output_dir=training_args.overwrite_output_dir,
+        evaluation_strategy="steps",
+        eval_steps=10,
+        save_strategy="steps",
+        save_steps=10_000,
+        warmup_steps=50000,
+        learning_rate=training_args.learning_rate,
+        adam_beta1=0.9,
+        adam_beta2=0.98,
+        adam_epsilon=1e-6,
+        weight_decay=0.01,
+        num_train_epochs=training_args.num_train_epochs,
+        per_device_train_batch_size=training_args.per_device_train_batch_size,
+        per_device_eval_batch_size=training_args.per_device_eval_batch_size,
+        gradient_accumulation_steps=4,
+        prediction_loss_only=True
+    )
+
     # Initialize our Trainer
     trainer = Trainer(
         model=model,
-        args=training_args,
+        args=custom_training_args,
         data_collator=data_collator,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
@@ -241,11 +261,6 @@ def main():
         results.update(result)
 
     return results
-
-
-def _mp_fn(index):
-    # For xla_spawn (TPUs)
-    main()
 
 
 if __name__ == "__main__":
