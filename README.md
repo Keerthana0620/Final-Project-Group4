@@ -9,8 +9,8 @@
 
 1. Apoorva Reddy 
 2. Keerthana Aravindhan
-3. Modupeola 
-4. Aaron
+3. Modupeola Fagbenro
+4. Aaron Yang
 
 ## Data Resources
 
