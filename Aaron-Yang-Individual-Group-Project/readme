@@ -1,12 +1,17 @@
-# Introduction to my works
+# Introduction to My Work
+
 ## Original Dataset Preprocessing
-I use the 'data-processing.py' file to clean the original dataset firstly, and store the result into 'final.csv'. And then I use 'batch_processing.py' 
-to batch all dataset into 96 batches to feed to the models
+The original dataset was cleaned using the `data-processing.py` script. After preprocessing, the cleaned data was saved as `final.csv`. 
+
+To train the models efficiently, the dataset was then split into 96 batches using the `batch_processing.py` script, making it easier to feed smaller batches to the models.
 
 ## Reduced Dataset Preprocessing
-Because of the machine resource limit, I also try to create a reduced dataset.
+Due to machine resource limitations, I also created a reduced version of the dataset. This reduced dataset allowed for faster experimentation without compromising too much on model performance.
 
-## Masking and adding noisy data
-Sometimes, there is one problem in the text generation problem, which is overfitting. To avoid that, the noisy dataset and masked dataset can be used in the trainning process.
+## Masking and Adding Noisy Data
+To prevent overfitting, which can often occur in text generation problems, I incorporated masking and noisy data techniques:
+- **Masking**: Certain parts of the dataset were masked to prevent the model from overfitting on specific phrases or words.
+- **Adding Noisy Data**: Additional noisy data was added during training to make the model more robust and improve generalization.
 
+These techniques help improve the model's ability to generate diverse and accurate text outputs.
 
