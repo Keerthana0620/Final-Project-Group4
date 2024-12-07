@@ -63,7 +63,7 @@ Filename: New_articles_combined.csv
         - Factual accuracy
      
 - References:
-Reference: 
+
 https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/
 https://www.sciencedirect.com/science/article/pii/S2467967423000880
 https://github.com/sumitgouthaman/lstm-text-generation
@@ -71,7 +71,8 @@ https://github.com/ApurbaSengupta/Text-Generation
 https://www.kaggle.com/code/shivamb/beginners-guide-to-text-generation-using-lstms
 https://github.com/ShrishtiHore/Conversational_Chatbot_using_LSTM
 
-Kaggle links  Dataset : 
+Kaggle links Dataset : 
+
 https://www.kaggle.com/datasets/shashichander009/inshorts-news-data
 https://www.kaggle.com/datasets/jacopoferretti/bbc-articles-dataset
 https://www.kaggle.com/datasets/sbhatti/news-summarization
