@@ -8,8 +8,8 @@ from transformers import pipeline
 @st.cache_resource
 def load_model():
     # Load the model and tokenizer from the extracted folder
-    tokenizer = GPT2Tokenizer.from_pretrained('./fine_tuned_GPTs')
-    model = GPT2LMHeadModel.from_pretrained('./fine_tuned_GPTs')
+    tokenizer = GPT2Tokenizer.from_pretrained('/Users/apoorvareddy/Downloads/Academic/DATS6312/Project/FineTunedGPT_model')
+    model = GPT2LMHeadModel.from_pretrained('/Users/apoorvareddy/Downloads/Academic/DATS6312/Project/FineTunedGPT_model')
     return model, tokenizer
 
 model, tokenizer = load_model()
