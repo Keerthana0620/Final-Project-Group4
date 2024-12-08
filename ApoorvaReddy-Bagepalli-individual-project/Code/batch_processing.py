@@ -10,7 +10,7 @@ import pandas as pd
 import re
 import nltk
 from nltk.tokenize import word_tokenize
-
+import os
 nltk.download('punkt_tab')
 nltk.download('punkt')
 
@@ -19,16 +19,6 @@ data = pd.read_csv('final.csv')
 print(data.head())
 
 def clean_txt_batch(df_column, batch_size=1000, output_dir="cleaned_batches"):
-    """
-    Clean text column in batches and save each batch to a separate text file.
-
-    Parameters:
-    - df_column: List of text data to clean.
-    - batch_size: Number of rows to process in each batch.
-    - output_dir: Directory to save the cleaned batches.
-    """
-    import os
-    
     # Create the output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     
