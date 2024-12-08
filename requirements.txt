@@ -3,7 +3,9 @@ gdown
 
 # Data Handling
 pandas
-numpy
+NumPy
+os
+subprocess
 
 # Natural Language Processing- classical method
 nltk
@@ -15,6 +17,11 @@ string
 tensorflow
 torch
 transformers
-torch
+dataclasses
+typing
+logging
+argparse
+sklearn
+
 
 
