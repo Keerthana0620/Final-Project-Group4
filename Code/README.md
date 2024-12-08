@@ -4,6 +4,9 @@
 - `Preprocessing.ipynb` : This notebook performs general preprocessing on the articles in the combined CSV, including text cleaning and formatting to prepare the data for model input.
 
 Marchov_Chain:
+- `pre-processing.py`: Let's you download the main data and pre-processes the data before proceeding to batch processing
+- `batch_processing.py` : It takes the cleaned data and saves each fixed length data in batch files under cleaned_batch folder which allows easy to run Markov chain model.
+- `Markov.py` : This is the main code, it consist of four variation of Markov Chain for the purpose to check which one workes better.
 
 RNN:
 
