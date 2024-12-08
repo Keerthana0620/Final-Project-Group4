@@ -18,8 +18,7 @@ Model is built from scratch and trained on a diverse dataset of news articles to
 - Future Work/ Post-training analysis
 
 ###  Project Dataset
-Primary Dataset Used:
-Filename: New_articles_combined.csv 
+- Primary Dataset Used: Filename: New_articles_combined.csv 
  - Data Sources:
     - CNN/DailyMail
     - BBC News
