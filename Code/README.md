@@ -8,8 +8,6 @@ Marchov_Chain:
 - `batch_processing.py` : It takes the cleaned data and saves each fixed length data in batch files under cleaned_batch folder which allows easy to run Markov chain model.
 - `Markov.py` : This is the main code, it consist of four variation of Markov Chain for the purpose to check which one workes better.
 
-RNN:
-
 LSTM:
 
 GPT-2:
