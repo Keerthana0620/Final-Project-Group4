@@ -21,13 +21,13 @@ The dataset for this project consists of a collection of recent news articles. A
 
 ## Repository Structure
 
-- **Group-Proposal:** Contains the project proposal PDF document.
-- **Final-Group-Project-Report:** Contains the final project report PDF.
-- **Final-Group-Presentation:** Contains the PowerPoint presentation PDF.
-- **Code:** Contains all project code and scripts.
-- **Datasets:** Provides links to raw and preprocessed datasets stored on Google Drive.
-- **App:** Contains the Streamlit application code.
-- **xx-xx-individual-project:** Contains the individual contributions of each team member.
+- `Group-Proposal:` Contains the project proposal PDF document.
+- `Final-Group-Project-Report:` Contains the final project report PDF.
+- `Final-Group-Presentation:` Contains the PowerPoint presentation PDF.
+- `Code:` Contains all project code and scripts.
+- `Datasets:` Provides links to raw and preprocessed datasets stored on Google Drive.
+- `App:` Contains the Streamlit application code.
+- `xx-xx-individual-project:` Contains the individual contributions of each team member.
 
 ## Data Preparation
 
