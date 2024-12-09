@@ -28,6 +28,9 @@ Model Architecture Strengths:
   - Prevents repetitive and bland outputs
 
  generating_loading_lstm_news_model.py: basically load the model.pt file and the generate news , depending on the news prompting 
+
+
+ 
 GPT-2:
 
 - `prepare_date.py`: Preprocesses and cleans the data for the GPT-2 model by adding special tokens to each article. The data is then split into training, validation, and test sets, saved as text files.
