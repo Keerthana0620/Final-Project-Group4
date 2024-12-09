@@ -17,4 +17,8 @@ logging
 argparse
 sklearn
 streamlit
-
+tqdm
+scikit-learn
+math
+dataclasses
+typing
