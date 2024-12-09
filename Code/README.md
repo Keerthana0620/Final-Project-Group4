@@ -23,7 +23,7 @@ GPT-2:
 - `run_generation.py`: Generates text based on an initial prompt provided while calling, utilizing the fine-tuned GPT-2 model.
 
 T5:
-- 'data_preprocessing.py': Cleans and formats raw datasets, creates prompt-target pairs, and splits data for training.
-- 'prepare_data.py': Tokenizes the preprocessed data for T5 model compatibility.
-- 'generation.py': Generates text using a fine-tuned T5 model with customizable parameters.
-- 'evaluation.py': Evaluates model performance using BLEU and Perplexity metrics.
+- `data_preprocessing.py`: Cleans and formats raw datasets, creates prompt-target pairs, and splits data for training.
+- `prepare_date.py`:: Tokenizes the preprocessed data for T5 model compatibility.
+- `generation.py`: Generates text using a fine-tuned T5 model with customizable parameters.
+- `evaluation.py`: Evaluates model performance using BLEU and Perplexity metrics.
