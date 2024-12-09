@@ -18,7 +18,7 @@ def generate_text(prompt, fine_tuned_model=model, fine_tuned_tokenizer=tokenizer
     generator = pipeline("text-generation", model=fine_tuned_model, tokenizer=fine_tuned_tokenizer)
 
     # Generate text based on the prompt
-    generated_text = generator(prompt, max_length=200, num_return_sequences=1)
+    generated_text = generator(prompt, max_length=200, num_return_sequences=1, temperature=0.6, top_k=40, top_p=0.85, repetition_penalty=1.3)
     return generated_text[0]['generated_text']
 
 # Step 4: Streamlit input section
@@ -35,3 +35,4 @@ def input():
 
 if __name__ == "__main__":
     input()
+
