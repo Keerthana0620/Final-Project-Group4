@@ -1,17 +1,23 @@
-# Introduction to My Work
-
-## Original Dataset Preprocessing
-The original dataset was cleaned using the `data-processing.py` script. After preprocessing, the cleaned data was saved as `final.csv`. 
-
-To train the models efficiently, the dataset was then split into 96 batches using the `batch_processing.py` script, making it easier to feed smaller batches to the models.
-
-## Reduced Dataset Preprocessing
-Due to machine resource limitations, I also created a reduced version of the dataset. This reduced dataset allowed for faster experimentation without compromising too much on model performance.
-
-## Masking and Adding Noisy Data
-To prevent overfitting, which can often occur in text generation problems, I incorporated masking and noisy data techniques:
-- **Masking**: Certain parts of the dataset were masked to prevent the model from overfitting on specific phrases or words.
-- **Adding Noisy Data**: Additional noisy data was added during training to make the model more robust and improve generalization.
-
-These techniques help improve the model's ability to generate diverse and accurate text outputs.
-
+project_root/
+├─ data/ 
+│  ├─ raw/                       # Original raw data files (CSV, etc.)
+│  ├─ processed/                 # Processed data outputs (from data_preprocessing)
+│  └─ splits/                    # Train/Val/Test splits after prepare_data step
+│
+├─ scripts/
+│  ├─ data_preprocessing.py      # Already have: Cleans & normalizes raw data, outputs processed_for_t5.csv
+│  ├─ prepare_data.py            # Takes processed_for_t5.csv, creates prompt-target pairs, splits into train/val/test
+│  ├─ run_training.py            # Fine-tunes T5 model on train set, evaluates on val, saves model checkpoints
+│  ├─ run_generation.py          # Uses the fine-tuned T5 model to generate text from a prompt
+│  ├─ evaluation.py              # Script to evaluate the model on the test set 
+│  └─ utils/                     # Utility functions (tokenization helpers, metric calculation, logging setup, etc.)
+│
+├─ models/
+│  ├─ checkpoints/               # Saved model checkpoints from training
+│  └─ final/                     # Final fine-tuned model and tokenizer
+│
+├─ configs/                      # Configuration files for training hyperparams, model paths, etc.
+│  ├─ training_config.json
+│  └─ generation_config.json
+│
+└─ requirements.txt              # Python dependencies
