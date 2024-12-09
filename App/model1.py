@@ -1,15 +1,11 @@
 import streamlit as st
-import pandas as pd
-import re
 import nltk
 from nltk.tokenize import word_tokenize
 import os
 import string
-from collections import defaultdict,Counter
+from collections import defaultdict
 import random
-from nltk import pos_tag
-import numpy as np
-import batch_processing
+
 
 nltk.download('averaged_perceptron_tagger')
 

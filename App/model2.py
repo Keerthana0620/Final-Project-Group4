@@ -1,6 +1,4 @@
 import streamlit as st
-import gdown
-import os
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from transformers import pipeline
 
