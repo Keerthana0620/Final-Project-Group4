@@ -25,5 +25,6 @@ GPT-2:
 T5:
 - `data_preprocessing.py`: Cleans and formats raw datasets, creates prompt-target pairs, and splits data for training.
 - `prepare_date.py`:: Tokenizes the preprocessed data for T5 model compatibility.
+- `train.py`: Train the model using pretrained T5 model.
 - `generation.py`: Generates text using a fine-tuned T5 model with customizable parameters.
 - `evaluation.py`: Evaluates model performance using BLEU and Perplexity metrics.
