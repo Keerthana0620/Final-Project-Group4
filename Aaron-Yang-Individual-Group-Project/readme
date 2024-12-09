@@ -1,23 +1,22 @@
-project_root/
-├─ data/ 
-│  ├─ raw/                       # Original raw data files (CSV, etc.)
-│  ├─ processed/                 # Processed data outputs (from data_preprocessing)
-│  └─ splits/                    # Train/Val/Test splits after prepare_data step
-│
-├─ scripts/
-│  ├─ data_preprocessing.py      # Already have: Cleans & normalizes raw data, outputs processed_for_t5.csv
-│  ├─ prepare_data.py            # Takes processed_for_t5.csv, creates prompt-target pairs, splits into train/val/test
-│  ├─ run_training.py            # Fine-tunes T5 model on train set, evaluates on val, saves model checkpoints
-│  ├─ run_generation.py          # Uses the fine-tuned T5 model to generate text from a prompt
-│  ├─ evaluation.py              # Script to evaluate the model on the test set 
-│  └─ utils/                     # Utility functions (tokenization helpers, metric calculation, logging setup, etc.)
-│
-├─ models/
-│  ├─ checkpoints/               # Saved model checkpoints from training
-│  └─ final/                     # Final fine-tuned model and tokenizer
-│
-├─ configs/                      # Configuration files for training hyperparams, model paths, etc.
-│  ├─ training_config.json
-│  └─ generation_config.json
-│
-└─ requirements.txt              # Python dependencies
+# Project Overview
+## Data Preprocessing
+The original dataset is about 3gb+. To use the dataset efficiently, it is necessay to create a reduced dataset, ' '.
+
+## T5 Model Training
+- 1. data_preprocessing.py
+- 2. prepare_data.py
+- 3. train.py
+- 4. generation.py
+- 5. evaluation.py
+
+## Usage
+python3 generation.py --model_dir /tmp/pycharm_project_809/NLP/Final_Project/T5/scripts/models/checkpoints/checkpoint-32902 --prompt "President Trump said that china is" 
+--max_length 500 --num_return_sequences 5
+
+If it used in the terminal, the below factors should be revised.
+
+- 1. the location '/tmp/pycharm_project_809/NLP/Final_Project/T5/scripts/models/checkpoints/checkpoint-32902' should be changed to the location where check-point-32902 is located.
+- 2. the prompt "President Trump said that china is" should be revised
+- 3. the max_length 500 can be revised, default is 500.
+- 4. the num_return_sequences 5 can be revised, default is 5.
+
