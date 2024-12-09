@@ -2,8 +2,7 @@ import streamlit as st
 import home
 import model1
 import model2
-import model3
-import model4
+
 # Sidebar dropdown for navigation
 options = ["Home", "Markov Chain", "GPT-2"]
 selected_option = st.sidebar.selectbox("Navigate to:", options)
