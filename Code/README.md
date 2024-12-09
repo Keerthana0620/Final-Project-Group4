@@ -11,6 +11,8 @@ Marchov_Chain:
 
 LSTM:
 
+- About_news_dataset.py:EDA  download the file , its typically- Clean dataset by removing problematic characters, Handle quote issue Remove empty lines, Create a new cleaned file, Show basic statistical information the data
+
 GPT-2:
 
 - `prepare_date.py`: Preprocesses and cleans the data for the GPT-2 model by adding special tokens to each article. The data is then split into training, validation, and test sets, saved as text files.
