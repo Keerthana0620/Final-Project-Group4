@@ -13,8 +13,6 @@ LSTM:
 
 - About_news_dataset.py:EDA  download the file , its typically- Clean dataset by removing problematic characters, Handle quote issue Remove empty lines, Create a new cleaned file, Show basic statistical information the data
 
-- LSTM:
-
 Lstm_Attention.py: Code Architecture Analysis : Model Components
   - NewsDatasetRead: Handles data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text
   - dataNewsDatasetProcessor: Creates vocabulary, Converts text to numerical sequences, Handles tokenization and special tokens
@@ -28,7 +26,8 @@ Model Architecture Strengths:
   - Multi-layer attention with Tanh activation, Helps mitigate vanishing gradient problem
   - Text Generation Techniques: Temperature scaling , Top-k sampling, Top-p (nucleus) sampling
   - Prevents repetitive and bland outputs
-
+    
+- generating_loading_lstm_news_model.py: basically load the model.pt file and the generate news , depending on the news prompting 
 GPT-2:
 
 - `prepare_date.py`: Preprocesses and cleans the data for the GPT-2 model by adding special tokens to each article. The data is then split into training, validation, and test sets, saved as text files.
