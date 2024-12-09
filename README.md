@@ -29,33 +29,22 @@ The dataset for this project consists of a collection of recent news articles. A
 - `App:` Contains the Streamlit application code.
 - `xx-xx-individual-project:` Contains the individual contributions of each team member.
 
-## Data Preparation
+## Project Workflow
+1. Loading main dataset
+  `Datasets` : file consist of all the google drive links to dataset we used
+2. Cleaning and Pre-processing data
+   Refer `Code` folder
+   - `Combining data.ipynb` : This notebook gathers data from multiple sources, extracts the content from each article, and consolidates it into a single CSV file.
+   - `Preprocessing.ipynb` : This notebook performs general preprocessing on the articles in the combined CSV, including text cleaning and formatting to prepare the data for model input.
+3. Model training and evaluating
+   Each of the team member personally pre-processed the data suitable for developing and training model.
+   Refer `Code` folder
+   - `Markov_chain`
+   - `LSTM + Attention`
+   - `T5`
+   - `GPT-2`
+4. Running streamlit app
+   It consist Markov Chain and GPT-2 model \
+   Refer `App` folder
 
-To ensure the dataset is usable and efficient for training, the following steps were undertaken:
-
-1. **Loading the Original Dataset:**
-
-   - Downloaded from Google Drive using `gdown`.
-   - File size: 438MB.
-
-2. **Preprocessing:**
-
-   - Text cleaning: Lowercasing, removing URLs, mentions, hashtags, special characters, and extra whitespace.
-   - Expanding contractions (e.g., "don't" to "do not").
-   - Removing stop words and lemmatization.
-
-3. **Data Augmentation:**
-
-   - **Reduced-size Dataset:** Sampling 50% of the cleaned dataset to create a manageable subset.
-   - **Masked Dataset:** Using a pre-trained NER model to identify and mask entities with `[MASK]` tokens to prevent overfitting on specific entities.
-   - **Noisy Dataset:** Adding irrelevant words randomly into the text to introduce noise and enhance model robustness.
-
-4. **Saving Augmented Datasets:**
-
-   - `reduced_dataset.csv`
-   - `reduced_dataset_masked.csv`
-   - `reduced_dataset_noisy.csv`
-
-5. Train model with different model Architecture: Classical: Markov_chain and Neural network :LSTM, RNN, GPT, T5
-6. Evaluate the best model
-7. Prepare presentation (PPT and slides)
+   
