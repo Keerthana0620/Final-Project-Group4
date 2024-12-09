@@ -1,7 +1,5 @@
 ## Modupeola_Fagbenro_Nlp_Individual_Project - For News Article Generation Using LSTM model 
 
-
-
 ### Natural Language Processing Individual Project Contributions - News Article Generation Using LSTM Model 
 
 ### Overview:
@@ -60,7 +58,23 @@ Model is built from scratch and trained on a diverse dataset of news articles to
         - Content relevance
         - Style consistency
         - Factual accuracy
-     
+
+-- Work-Flow:
+Files: 
+
+- Modupeola_Fagbenro-individual-project -link
+- Modupeola_Fagbenro-final-project.pdf
+
+
+── Code
+
+    ── lstm_attention.py
+    
+    _ About_news_dataset.py(EDA)
+    
+    _ generating_news.py
+    
+    
 - References:
 
 https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/
