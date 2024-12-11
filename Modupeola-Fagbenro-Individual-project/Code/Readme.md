@@ -43,8 +43,9 @@
                   configparser
 
 
-      -  Configuration Setup
-      Create config directory and file
+      -  Configuration Setup: make sure you Create  config directory with aws .cong file
+
+      -  Run the app; streamlit run Llama_streamlit_news_generation_app.py
 
 
 
