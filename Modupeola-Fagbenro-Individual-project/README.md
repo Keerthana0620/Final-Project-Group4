@@ -87,6 +87,10 @@ Files:
 
     - Llama_streamlit_news_generation_app.py
     
+
+- Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with Attention.
+- generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+    
 - References:
 
 https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/
