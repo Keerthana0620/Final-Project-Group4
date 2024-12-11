@@ -1,13 +1,13 @@
 - Code Workflow :
 
--- Work-Flow:
+- Work-Flow:
 Files: 
 
 - Modupeola_Fagbenro-individual-project -link
 - Modupeola_Fagbenro-final-project.pdf
 
 
-── Code
+─ Code
 
     ── lstm_attention.py
     
@@ -19,10 +19,13 @@ Files:
 
     - Llama_streamlit_news_generation_app.py
     
-LSTM:
+- LSTM:
 
 Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with Attention.
 generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+
+
+    
 
 
 
