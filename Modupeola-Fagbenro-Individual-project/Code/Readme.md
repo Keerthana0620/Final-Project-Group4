@@ -1,22 +1,25 @@
 - Code Workflow :
 
-─ Code
+    ─ Code
 
-    ── lstm_attention.py
+        ── lstm_attention.py
     
-    _ About_news_dataset.py(EDA)
+        _ About_news_dataset.py(EDA)
     
-    _ generating_news.py
+        _ generating_news.py
     
-    - llama_news_generation.py
+        - llama_news_generation.py
 
-    - Llama_streamlit_news_generation_app.py
+        - Llama_streamlit_news_generation_app.py
     
-- LSTM + attention Implementation:
+    - LSTM + attention Implementation:
 
-Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with Attention.
+    Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with     Attention.
 
-generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+    generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+
+- Setup and Implementation Guide for News Generation System Using Llma and AWS Bedrock
+
 
 
     
