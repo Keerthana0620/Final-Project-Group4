@@ -13,4 +13,4 @@ It consist
 - `run_generation.py`: Generates text based on an initial prompt provided while calling, utilizing the fine-tuned GPT-2 model.
 
 - `BART.py`: Contains code to fine tune BART model to generate coherent text.
-- `Content generation.py`: Contains code to execute general BART, GPT models to generate text.
+- `Content generation.py`: Contains code to execute general BART, GPT models to generate text..
