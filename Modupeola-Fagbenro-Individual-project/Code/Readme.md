@@ -32,16 +32,16 @@
   
           - Create virtual environment locally- python -m venv myenv : source myenv/bin/activate
           -  Package Installation
-          - download requirements.txt
-              - # Add:
+          - download requirements.txt     
+        -  Install requirements
+            pip install -r requirements.txt
+            - # Add:
                 streamlit==1.24.0
                   pandas
                   boto3
                   python-dotenv
                   configparser
 
-        -  Install requirements
-            pip install -r requirements.txt
 
       -  Configuration Setup
       Create config directory and file
