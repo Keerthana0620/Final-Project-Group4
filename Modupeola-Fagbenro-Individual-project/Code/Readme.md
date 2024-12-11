@@ -31,7 +31,6 @@
       -  Environment Setup:
   
           - Create virtual environment locally- python -m venv myenv : source myenv/bin/activate
-          -  Package Installation
           - download requirements.txt     
         -  Install requirements
             pip install -r requirements.txt
@@ -43,7 +42,7 @@
                   configparser
 
 
-      -  Configuration Setup: make sure you Create  config directory with aws .cong file
+      -  Configuration Setup: make sure you Create  config directory :  aws .cong file
 
       -  Run the app; streamlit run Llama_streamlit_news_generation_app.py
 
