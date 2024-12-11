@@ -60,11 +60,6 @@ Model is built from scratch and trained on a diverse dataset of news articles to
         - Style consistency
         - Factual accuracy
      
-
-     
-
-- Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with Attention.
-- generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
     
 - References:
 
