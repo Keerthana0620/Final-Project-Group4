@@ -11,13 +11,18 @@
         - llama_news_generation.py
 
         - Llama_streamlit_news_generation_app.py
-        - news_
+  
+        - news_dataset_cleaning.py
     
-    - LSTM + attention Implementation:
+    - LSTM + attention Implementation and Llama + aws bedrock:
 
-    Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with     Attention.
+   -  Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with     Attention.
 
-    generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+    - generating_loading_lstm_news_model.py: Code to load the model.pt file and the generate news.
+   -  About_news_dataset.py: code to load , check description and dataset information
+   -  llama_news_generation.py : code for generating news article using llama + aws bedrock + prompt engineering
+   - Llama_streamlit_news_generation_app.py : streamlit code for news generating article
+   -  news_dataset_cleaning.py : this code is used for cleaning, preprocessing, handling error and filtering text , the output dataset is use as input for Llama Implementataion
 
 - Setup and Implementation Guide for News Generation System Using Llma and AWS Bedrock
 
