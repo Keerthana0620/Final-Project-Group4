@@ -10,10 +10,10 @@ Model is built from scratch and trained on a diverse dataset of news articles to
 ### Project Objectives
 
 - Develop from scratch deep learning- neural network LSTM model for news article generation using PYTORCH 
-- Train the model on a comprehensive news dataset from various source up till 5 data news sources 
+- Train the model on a comprehensive news dataset from various source up till 5 data news sources using LSTM + Attention
 - Generate high-quality, coherent news articles
 - Evaluate and optimize model performance
-- Future Work/ Post-training analysis
+- Further Explored News Genereation Using LLAMA and AWS bedrock - generated a high quality news 
 
 ###  Project Dataset
 - Primary Dataset Used: Filename: New_articles_combined.csv 
@@ -24,19 +24,20 @@ Model is built from scratch and trained on a diverse dataset of news articles to
    - Inshorts News Data
    - NYTimes Article Dataset
 
-- About the Dataset: 
+- Dataset Preprocessing: 
     - Dataset preview
     - Getting basic dataset Information
+    - used cleaned_article.csv after dataset preprocessing 
  
 
   #### Tech Stats 💻 :
   <img src="https://img.shields.io/badge/python-orange" alt="python" /> <img src="https://img.shields.io/badge/pytorch-blue" alt="pytorch" /> <img src="https://img.shields.io/badge/pandas-lightgreen" alt="pandas"/> <img src="https://img.shields.io/badge/numpy-blue" alt="numpy" /> <img src="https://img.shields.io/badge/torch-orange" alt="torch" />
 
  
- ### Model Architecture 
+ ### Model Architecture For LSTM + Attention and (Llma + AWS bedrock)  
 
 
-- Data Pre-processing Pipeline:
+- Data Pre-processing Pipeline Uisng LSTM + Attention :
   - Text Preprocessing:
       - Data cleaning and normalization
       - Token generation
@@ -59,6 +60,8 @@ Model is built from scratch and trained on a diverse dataset of news articles to
         - Style consistency
         - Factual accuracy
      
+
+     
 LSTM:
 
 Lstm_Attention.py: Code to handle data loading and initial preprocessing, Robust error handling for CSV readingCleans and filters text. Training and evaluation the LSTM model with Attention.
@@ -80,6 +83,9 @@ Files:
     
     _ generating_news.py
     
+    - llama_news_generation.py
+
+    - Llama_streamlit_news_generation_app.py
     
 - References:
 
