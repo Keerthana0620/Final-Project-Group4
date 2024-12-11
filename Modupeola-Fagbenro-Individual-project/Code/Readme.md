@@ -1,11 +1,5 @@
 - Code Workflow :
 
-    Files: 
-
-    - Modupeola_Fagbenro-individual-project -link
-    - Modupeola_Fagbenro-final-project.pdf
-
-
 ─ Code
 
     ── lstm_attention.py
